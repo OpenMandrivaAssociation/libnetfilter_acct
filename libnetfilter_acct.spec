@@ -5,7 +5,7 @@
 Summary:	Netfilter extended accounting infrastructure library
 Name:		libnetfilter_acct
 Version:	1.0.0
-Release:	2
+Release:	1
 Group:		System/Libraries
 License:	GPL
 URL:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
@@ -57,3 +57,13 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libnetfilter_acct.pc
 
+
+
+%changelog
+* Mon Apr 16 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
++ Revision: 791236
+- import libnetfilter_acct
+
+
+* Mon Apr 16 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
+- initial Mandriva package
