@@ -1,14 +1,14 @@
-%define major 1
-%define libname %mklibname netfilter_acct %{major}
-%define libnamedevel %mklibname netfilter_acct -d
+%define major	1
+%define libname	%mklibname netfilter_acct %{major}
+%define devname	%mklibname netfilter_acct -d
 
 Summary:	Netfilter extended accounting infrastructure library
 Name:		libnetfilter_acct
 Version:	1.0.1
 Release:	1
 Group:		System/Libraries
-License:	GPL
-URL:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
+License:	GPLv2
+Url:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
 Source0:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2
 Source1:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2.sig
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
@@ -27,44 +27,32 @@ Provides:	netfilter_acct = %{version}-%{release}
 libnetfilter_acct is the userspace library providing interface to extended
 accounting infrastructure.
 
-%package -n %{libnamedevel}
+%package -n %{devname}
 Summary:        Development files for %{name}
 Group:          System/Libraries
 Provides:	netfilter_acct-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 
-%description -n %{libnamedevel}
+%description -n %{devname}
 This package contains the development files for %{name}.
 
 %prep
 %setup -q
+autoreconf -fi
 
 %build
-autoreconf -fi
 %configure2_5x
 %make
 
 %install
 %makeinstall_std
 
-rm -f %{buildroot}%{_libdir}/*.la
-
 %files -n %{libname}
-%doc COPYING README
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libnetfilter_acct.so.%{major}*
 
-%files -n %{libnamedevel}
+%files -n %{devname}
+%doc COPYING README
 %{_includedir}/libnetfilter_acct
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libnetfilter_acct.pc
 
-
-
-%changelog
-* Mon Apr 16 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
-+ Revision: 791236
-- import libnetfilter_acct
-
-
-* Mon Apr 16 2012 Oden Eriksson <oeriksson@mandriva.com> 1.0.0-1
-- initial Mandriva package
