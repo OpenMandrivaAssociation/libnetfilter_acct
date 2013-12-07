@@ -5,7 +5,7 @@
 Summary:	Netfilter extended accounting infrastructure library
 Name:		libnetfilter_acct
 Version:	1.0.1
-Release:	1
+Release:	2
 Group:		System/Libraries
 License:	GPLv2
 Url:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
