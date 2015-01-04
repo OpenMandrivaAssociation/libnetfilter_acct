@@ -1,11 +1,12 @@
 %define major	1
 %define libname	%mklibname netfilter_acct %{major}
 %define devname	%mklibname netfilter_acct -d
+%define debug_package %{nil}
 
 Summary:	Netfilter extended accounting infrastructure library
 Name:		libnetfilter_acct
 Version:	1.0.1
-Release:	8
+Release:	9
 Group:		System/Libraries
 License:	GPLv2
 Url:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
@@ -41,6 +42,7 @@ This package contains the development files for %{name}.
 autoreconf -fi
 
 %build
+export CFLAGS+=-fvisibility=default
 %configure2_5x
 %make
 
