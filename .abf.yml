@@ -1,5 +1,3 @@
-removed_sources:
-  libnetfilter_acct-1.0.0.tar.bz2: 50ff5c6815565fc126a1694717ae05b99a1c19e4
 sources:
-  libnetfilter_acct-1.0.1.tar.bz2: 693357ce887f16042f4f9a3b5060a602912c2d7a
-  libnetfilter_acct-1.0.1.tar.bz2.sig: f325bc25fba68b7c404e849b58a5c6c875a50996
+  libnetfilter_acct-1.0.3.tar.bz2: 4b9073e4aa989b0f000c8da1ab01b22fceed52b2
+  libnetfilter_acct-1.0.3.tar.bz2.sig: 5af3276d12b7319ce3049cbb9e650798d65bd9b7
