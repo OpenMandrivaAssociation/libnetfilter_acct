@@ -9,7 +9,7 @@ Version:	1.0.3
 Release:	4
 Group:		System/Libraries
 License:	GPLv2
-Url:		http://www.netfilter.org/projects/libnetfilter_acct/index.html
+Url:		https://www.netfilter.org/projects/libnetfilter_acct/index.html
 Source0:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2
 Source1:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2.sig
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
