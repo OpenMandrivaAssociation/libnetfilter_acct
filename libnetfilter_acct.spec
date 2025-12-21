@@ -12,6 +12,11 @@ License:	GPLv2
 Url:		https://www.netfilter.org/projects/libnetfilter_acct/index.html
 Source0:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2
 Source1:	http://www.netfilter.org/projects/libnetfilter_acct/files/libnetfilter_acct-%{version}.tar.bz2.sig
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libmnl) >= 1.0.0
 
 %description
